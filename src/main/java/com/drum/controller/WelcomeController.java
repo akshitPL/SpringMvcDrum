@@ -2,22 +2,27 @@ package com.drum.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
+//@RequestMapping("/v1/")
 public class WelcomeController {
 
-	@RequestMapping("/")
+	@RequestMapping("/C")
+	@ResponseBody 
 	public String getResponse()
 	{
 		System.out.println("WelcomeController.getResponse()");
-		return "hello";
+		return "THIS IS MY FIRST PRSPNSE WITHOUT VIEW";
 	}
 	
 	
 	
 	@RequestMapping("/login")
-	public String loginRequest()
-	{
+	public String loginRequest(@RequestParam("user") String userName , @RequestParam("pass") String pass){
+		System.out.println("YOUR USERNAME IS:" +userName);
+		System.out.println("YOUR USERNAME IS:" +pass);
 		System.out.println("login.getResponse()");
 		return "profile";
 	}

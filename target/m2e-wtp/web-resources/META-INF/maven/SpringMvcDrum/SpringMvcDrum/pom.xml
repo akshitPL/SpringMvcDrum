@@ -11,7 +11,19 @@
 	<dependencies>
 	
 
+<dependency>
+			<groupId>jakarta.servlet</groupId>
+			<artifactId>jakarta.servlet-api</artifactId>
+			<version>6.1.0</version>
+			<scope>provided</scope>
+		</dependency>
 
+		
+		<dependency>
+			<groupId>jakarta.servlet.jsp.jstl</groupId>
+			<artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
+			<version>2.0.0</version>
+		</dependency>
    
 
     <!-- Servlet API (provided by Tomcat) -->
@@ -64,6 +76,11 @@
 			<version>6.2.5</version>
 		</dependency>
 
+		<dependency>
+			<groupId>com.hms</groupId>
+			<artifactId>hospital-management-system</artifactId>
+			<version>1.0.0</version>
+		</dependency>
 	</dependencies>
 
 
