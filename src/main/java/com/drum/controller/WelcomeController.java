@@ -1,6 +1,7 @@
 package com.drum.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -20,10 +21,13 @@ public class WelcomeController {
 	
 	
 	@RequestMapping("/login")
-	public String loginRequest(@RequestParam("user") String userName , @RequestParam("pass") String pass){
+	public String loginRequest(@RequestParam("user") String userName , @RequestParam("pass") String pass, Model m){
 		System.out.println("YOUR USERNAME IS:" +userName);
 		System.out.println("YOUR USERNAME IS:" +pass);
 		System.out.println("login.getResponse()");
+		
+		String mess = "hello" + userName +"and pass"+pass ;
+		m.addAttribute("msg",mess);
 		return "profile";
 	}
 }
