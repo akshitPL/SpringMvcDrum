@@ -14,4 +14,16 @@ public class User {
 
     public String getEmail() { return email; }
     public void setEmail(String email) { this.email = email; }
+	public User(String firstName, String lastName, String email) {
+		super();
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.email = email;
+	}
+	public User() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	
 }

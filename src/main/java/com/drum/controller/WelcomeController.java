@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 //@RequestMapping("/v1/")
 public class WelcomeController {
 
-	@RequestMapping("/C")
+	@RequestMapping("/")
 	@ResponseBody 
 	public String getResponse()
 	{
