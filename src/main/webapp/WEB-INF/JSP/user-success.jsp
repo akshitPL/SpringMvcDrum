@@ -4,6 +4,6 @@
 </head>
 <body>
     <h2>${message}</h2>
-    <p>User Details Submitted Successfully.</p>
+    <p>Name: ${user.firstName} ${user.lastName}</p>
 </body>
 </html>
